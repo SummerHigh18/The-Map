@@ -34,10 +34,15 @@ let mapLayers = {
 
 let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
+let theLatitude;
+let theLongitude;
+let theCoordinates
 
+function getCoordinates(e) {
+    theCoordinates = e.latlng
+    theLatitude = theCoordinates.lat
+    theLongitude = theCoordinates.lng
+    
+}
 
-let testMarker = L.marker([1.3521, 103.8198])
-
-let testPop = testMarker.bindPopup("This is Singapore!")
-
-testPop.addTo(theMap)
+theMap.on('click', getCoordinates)
