@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 70%;
+    /* height: 100vh; */
+    height: 100vh;
+    border: 0;
+    
+}
+
+#main {
+    display: flex;
+
+}
+
+
+#side-bar {
+    width: 30%;
+}
