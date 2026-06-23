@@ -29,27 +29,27 @@ let mapLayers = {
     "Dark Outline": darkOutline}
 let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
-let theLatitude;
-let theLongitude;
-let theCoordinates;
 
-function getCoordinates(e) {
-    theCoordinates = e.latlng
-    theLatitude = theCoordinates.lat
-    theLongitude = theCoordinates.lng
-    
-}
+let countryCode;
 
-let theUrl = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=-34.44076&lon=-58.70521&layer=address"
+async function gettingAddress(e) {
+    let theCoordinates = e.latlng
+    let theLatitude = theCoordinates.lat
+    let theLongitude = theCoordinates.lng
 
-const gettingInfo = async () => {
+    let theUrl = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${theLatitude}&lon=${theLongitude}&layer=address`
     let response = await fetch(theUrl)
     let data = await response.json()
-    console.log(data.address);
 
+    countryCode = data.address.country_code
+    console.log(countryCode);
     
 }
 
+theMap.on('click', gettingAddress)
 
 
-theMap.on('click', getCoordinates)
+
+
+
+
