@@ -32,3 +32,7 @@ to make the marker **say** something :
 ---
 ### Layers
 hmm, so I added currently 3 map layers, which seems fine as of now
+
+### The Coordinate thing and API calling
+
+So hell yeah! I managed to get th e latitude and longitude and store it in the local variables inside the function, and now the main part is fetching the json file containing the details  
