@@ -1,3 +1,4 @@
+
 let theMap = L.map('map').setView([1.3521, 103.8198], 11);
 
 
@@ -31,6 +32,9 @@ let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
 
 let countryCode;
+let countryName;
+let flagUrl;
+let currency;
 
 async function gettingAddress(e) {
     let theCoordinates = e.latlng
@@ -42,11 +46,32 @@ async function gettingAddress(e) {
     let data = await response.json()
 
     countryCode = data.address.country_code
-    console.log(countryCode);
-    
-}
 
+
+
+    fetch(`https://api.restcountries.com/countries/v5/codes.alpha_2/${countryCode}?pretty=1`, { headers: { 'Authorization': 'Bearer rc_live_ff75f42828d6448fba2304c585904f05' } } 
+)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        countryName = data.data.objects[0].names.common
+        flagUrl = data.data.objects[0].flag.url_png
+        currency = data.data.objects[0].currencies[0].name
+
+        console.log(countryName);
+        console.log(currency);
+        
+    })
+
+}
 theMap.on('click', gettingAddress)
+
+
+
+
+
+
 
 
 

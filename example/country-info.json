@@ -1,0 +1,535 @@
+{
+    "data": {
+        "objects": [
+            {
+                "names": {
+                    "alternates": [
+                        "RSA",
+                        "Suid-Afrika"
+                    ],
+                    "common": "South Africa",
+                    "native": {
+                        "afr": {
+                            "common": "South Africa",
+                            "official": "Republiek van Suid-Afrika"
+                        },
+                        "eng": {
+                            "common": "South Africa",
+                            "official": "Republic of South Africa"
+                        },
+                        "nbl": {
+                            "common": "Sewula Afrika",
+                            "official": "IRiphabliki yeSewula Afrika"
+                        },
+                        "nso": {
+                            "common": "Afrika-Borwa",
+                            "official": "Rephaboliki ya Afrika-Borwa "
+                        },
+                        "sot": {
+                            "common": "Afrika Borwa",
+                            "official": "Rephaboliki ya Afrika Borwa"
+                        },
+                        "ssw": {
+                            "common": "Ningizimu Afrika",
+                            "official": "IRiphabhulikhi yeNingizimu Afrika"
+                        },
+                        "tsn": {
+                            "common": "Aforika Borwa",
+                            "official": "Rephaboliki ya Aforika Borwa"
+                        },
+                        "tso": {
+                            "common": "Afrika Dzonga",
+                            "official": "Riphabliki ra Afrika Dzonga"
+                        },
+                        "ven": {
+                            "common": "Afurika Tshipembe",
+                            "official": "Riphabuḽiki ya Afurika Tshipembe"
+                        },
+                        "xho": {
+                            "common": "Mzantsi Afrika",
+                            "official": "IRiphabliki yaseMzantsi Afrika"
+                        },
+                        "zul": {
+                            "common": "Ningizimu Afrika",
+                            "official": "IRiphabliki yaseNingizimu Afrika"
+                        }
+                    },
+                    "official": "Republic of South Africa",
+                    "translations": {
+                        "ara": {
+                            "common": "جنوب أفريقيا",
+                            "official": "جمهورية جنوب أفريقيا"
+                        },
+                        "bre": {
+                            "common": "Suafrika",
+                            "official": "Republik Suafrika"
+                        },
+                        "ces": {
+                            "common": "Jihoafrická republika",
+                            "official": "Jihoafrická republika"
+                        },
+                        "cym": {
+                            "common": "South Africa",
+                            "official": "Republic of South Africa"
+                        },
+                        "deu": {
+                            "common": "Südafrika",
+                            "official": "Republik Südafrika"
+                        },
+                        "est": {
+                            "common": "Lõuna-Aafrika Vabariik",
+                            "official": "Lõuna-Aafrika Vabariik"
+                        },
+                        "fas": {
+                            "common": "آفریقای جنوبی",
+                            "official": "جمهوری آفریقای جنوبی"
+                        },
+                        "fin": {
+                            "common": "Etelä-Afrikka",
+                            "official": "Etelä-Afrikan tasavalta"
+                        },
+                        "fra": {
+                            "common": "Afrique du Sud",
+                            "official": "République d'Afrique du Sud"
+                        },
+                        "hrv": {
+                            "common": "Južna Afrika",
+                            "official": "Južnoafrička Republika"
+                        },
+                        "hun": {
+                            "common": "Dél-afrikai Köztársaság",
+                            "official": "Dél-afrikai Köztársaság"
+                        },
+                        "ind": {
+                            "common": "Afrika Selatan",
+                            "official": "Republik Afrika Selatan"
+                        },
+                        "ita": {
+                            "common": "Sud Africa",
+                            "official": "Repubblica del Sud Africa"
+                        },
+                        "jpn": {
+                            "common": "南アフリカ",
+                            "official": "南アフリカ共和国"
+                        },
+                        "kor": {
+                            "common": "남아프리카 공화국",
+                            "official": "남아프리카 공화국"
+                        },
+                        "nld": {
+                            "common": "Zuid-Afrika",
+                            "official": "Republiek Zuid-Afrika"
+                        },
+                        "pol": {
+                            "common": "Południowa Afryka",
+                            "official": "Republika Południowej Afryki"
+                        },
+                        "por": {
+                            "common": "África do Sul",
+                            "official": "República da África do Sul"
+                        },
+                        "rus": {
+                            "common": "Южная Африка",
+                            "official": "Южно-Африканская Республика"
+                        },
+                        "slk": {
+                            "common": "Južná Afrika",
+                            "official": "Juhoafrická republika"
+                        },
+                        "spa": {
+                            "common": "Sudáfrica",
+                            "official": "República de Sudáfrica"
+                        },
+                        "srp": {
+                            "common": "Јужноафричка Република",
+                            "official": "Република Јужна Африка"
+                        },
+                        "swe": {
+                            "common": "Sydafrika",
+                            "official": "Republiken Sydafrika"
+                        },
+                        "tur": {
+                            "common": "Güney Afrika",
+                            "official": "Güney Afrika Cumhuriyeti"
+                        },
+                        "urd": {
+                            "common": "جنوبی افریقا",
+                            "official": "جمہوریہ جنوبی افریقا"
+                        },
+                        "zho": {
+                            "common": "南非",
+                            "official": "南非共和国"
+                        }
+                    }
+                },
+                "codes": {
+                    "alpha_2": "ZA",
+                    "alpha_3": "ZAF",
+                    "ccn3": "710",
+                    "cioc": "RSA",
+                    "fifa": "RSA",
+                    "fips": "SF",
+                    "gec": "SF"
+                },
+                "capitals": [
+                    {
+                        "attributes": {
+                            "administrative": false,
+                            "constitutional": false,
+                            "executive": true,
+                            "judicial": false,
+                            "legislative": false,
+                            "primary": false
+                        },
+                        "coordinates": {
+                            "lat": -25.74,
+                            "lng": 28.19
+                        },
+                        "name": "Pretoria"
+                    },
+                    {
+                        "attributes": {
+                            "administrative": false,
+                            "constitutional": false,
+                            "executive": false,
+                            "judicial": false,
+                            "legislative": true,
+                            "primary": false
+                        },
+                        "coordinates": {
+                            "lat": -33.92,
+                            "lng": 18.42
+                        },
+                        "name": "Cape Town"
+                    },
+                    {
+                        "attributes": {
+                            "administrative": false,
+                            "constitutional": false,
+                            "executive": false,
+                            "judicial": true,
+                            "legislative": false,
+                            "primary": false
+                        },
+                        "coordinates": {
+                            "lat": -29.12,
+                            "lng": 26.21
+                        },
+                        "name": "Bloemfontein"
+                    }
+                ],
+                "flag": {
+                    "colors": {
+                        "dominant": "#071c88",
+                        "palette": [
+                            {
+                                "hex": "#071c88",
+                                "proportion": 0.21676564641388762
+                            },
+                            {
+                                "hex": "#e33c32",
+                                "proportion": 0.2105984467793513
+                            },
+                            {
+                                "hex": "#f8eac0",
+                                "proportion": 0.16285975331201463
+                            },
+                            {
+                                "hex": "#000000",
+                                "proportion": 0.09045226130653267
+                            },
+                            {
+                                "hex": "#007d55",
+                                "proportion": 0.2914572864321608
+                            },
+                            {
+                                "hex": "#29773b",
+                                "proportion": 0.019186843307446324
+                            },
+                            {
+                                "hex": "#7eb783",
+                                "proportion": 0.008222932846048425
+                            },
+                            {
+                                "hex": "#574213",
+                                "proportion": 0.00045682960255824577
+                            }
+                        ],
+                        "prominent": "#007d55",
+                        "swatches": {
+                            "dark_muted": "#574213",
+                            "dark_vibrant": "#071c88",
+                            "light_muted": "#f8eac0",
+                            "light_vibrant": "#7eb783",
+                            "muted": "#007d55",
+                            "vibrant": "#e33c32"
+                        }
+                    },
+                    "description": "The flag of South Africa is composed of two equal horizontal bands of red and blue, with a yellow-edged black isosceles triangle superimposed on the hoist side of the field. This triangle has its base centered on the hoist end, spans about two-fifth the width and two-third the height of the field, and is enclosed on its sides by the arms of a white-edged green horizontally oriented Y-shaped band which extends along the boundary of the red and blue bands to the fly end of the field.",
+                    "emoji": "🇿🇦",
+                    "html_entity": "&#127487;&#127462;",
+                    "unicode": "U+1F1FF U+1F1E6",
+                    "url_png": "https://flags.restcountries.com/v5/w640/za.png",
+                    "url_svg": "https://flags.restcountries.com/v5/svg/za.svg"
+                },
+                "region": "Africa",
+                "subregion": "Southern Africa",
+                "area": {
+                    "kilometers": 1221037,
+                    "miles": 471444.8
+                },
+                "assets": [],
+                "borders": [
+                    "BWA",
+                    "LSO",
+                    "MOZ",
+                    "NAM",
+                    "SWZ",
+                    "ZWE"
+                ],
+                "calling_codes": [
+                    "27"
+                ],
+                "cars": {
+                    "driving_side": "left",
+                    "signs": [
+                        "ZA"
+                    ]
+                },
+                "classification": {
+                    "dependency": false,
+                    "dependency_type": "",
+                    "disputed": false,
+                    "iso_status": "official",
+                    "sovereign": true,
+                    "un_member": true,
+                    "un_observer": false
+                },
+                "continents": [
+                    "Africa"
+                ],
+                "coordinates": {
+                    "lat": -29,
+                    "lng": 24
+                },
+                "currencies": [
+                    {
+                        "code": "ZAR",
+                        "name": "South African rand",
+                        "symbol": "R"
+                    }
+                ],
+                "date": {
+                    "academic_year_start": {
+                        "day": 15,
+                        "month": 1
+                    },
+                    "fiscal_year_start": {
+                        "corporate": {
+                            "basis": "default",
+                            "day": 1,
+                            "month": 3
+                        },
+                        "government": {
+                            "day": 1,
+                            "month": 4
+                        },
+                        "personal": {
+                            "day": 1,
+                            "month": 3
+                        }
+                    },
+                    "start_of_week": "monday"
+                },
+                "demonyms": {
+                    "eng": {
+                        "f": "South African",
+                        "m": "South African"
+                    },
+                    "fra": {
+                        "f": "Sud-africaine",
+                        "m": "Sud-africain"
+                    }
+                },
+                "economy": {
+                    "gini_coefficient": {
+                        "2007": 65,
+                        "2010": 62.5,
+                        "2012": 60.9,
+                        "2016": 59.6,
+                        "2024": 54.1
+                    }
+                },
+                "government_type": "Unitary parliamentary republic with an executive presidency",
+                "landlocked": false,
+                "languages": [
+                    {
+                        "bcp47": "af",
+                        "iso639_1": "af",
+                        "iso639_2b": "afr",
+                        "iso639_2t": "afr",
+                        "iso639_3": "afr",
+                        "name": "Afrikaans",
+                        "native_name": "Afrikaans"
+                    },
+                    {
+                        "bcp47": "en",
+                        "iso639_1": "en",
+                        "iso639_2b": "eng",
+                        "iso639_2t": "eng",
+                        "iso639_3": "eng",
+                        "name": "English",
+                        "native_name": "English"
+                    },
+                    {
+                        "bcp47": "nr",
+                        "iso639_1": "nr",
+                        "iso639_2b": "nbl",
+                        "iso639_2t": "nbl",
+                        "iso639_3": "nbl",
+                        "name": "Southern Ndebele",
+                        "native_name": "isiNdebele"
+                    },
+                    {
+                        "bcp47": "nso",
+                        "iso639_1": "",
+                        "iso639_2b": "nso",
+                        "iso639_2t": "nso",
+                        "iso639_3": "nso",
+                        "name": "Northern Sotho",
+                        "native_name": "Sesotho sa Leboa"
+                    },
+                    {
+                        "bcp47": "st",
+                        "iso639_1": "st",
+                        "iso639_2b": "sot",
+                        "iso639_2t": "sot",
+                        "iso639_3": "sot",
+                        "name": "Sotho",
+                        "native_name": "Sesotho"
+                    },
+                    {
+                        "bcp47": "ss",
+                        "iso639_1": "ss",
+                        "iso639_2b": "ssw",
+                        "iso639_2t": "ssw",
+                        "iso639_3": "ssw",
+                        "name": "Swazi",
+                        "native_name": "SiSwati"
+                    },
+                    {
+                        "bcp47": "tn",
+                        "iso639_1": "tn",
+                        "iso639_2b": "tsn",
+                        "iso639_2t": "tsn",
+                        "iso639_3": "tsn",
+                        "name": "Tswana",
+                        "native_name": "Setswana"
+                    },
+                    {
+                        "bcp47": "ts",
+                        "iso639_1": "ts",
+                        "iso639_2b": "tso",
+                        "iso639_2t": "tso",
+                        "iso639_3": "tso",
+                        "name": "Tsonga",
+                        "native_name": "Xitsonga"
+                    },
+                    {
+                        "bcp47": "ve",
+                        "iso639_1": "ve",
+                        "iso639_2b": "ven",
+                        "iso639_2t": "ven",
+                        "iso639_3": "ven",
+                        "name": "Venda",
+                        "native_name": "Tshivenḓa"
+                    },
+                    {
+                        "bcp47": "xh",
+                        "iso639_1": "xh",
+                        "iso639_2b": "xho",
+                        "iso639_2t": "xho",
+                        "iso639_3": "xho",
+                        "name": "Xhosa",
+                        "native_name": "isiXhosa"
+                    },
+                    {
+                        "bcp47": "zu",
+                        "iso639_1": "zu",
+                        "iso639_2b": "zul",
+                        "iso639_2t": "zul",
+                        "iso639_3": "zul",
+                        "name": "Zulu",
+                        "native_name": "isiZulu"
+                    }
+                ],
+                "leaders": [
+                    {
+                        "message": "data.leaders is only available on paid plans. Go to https://restcountries.com/plans to make updates to your account.",
+                        "sample": "https://files-03.restcountries.com/countries.00/sample.leaders.json"
+                    }
+                ],
+                "links": {
+                    "google_maps": "https://goo.gl/maps/CLCZ1R8Uz1KpYhRv6",
+                    "official": "https://www.gov.za",
+                    "open_street_maps": "https://www.openstreetmap.org/relation/87565",
+                    "wikipedia": "https://en.wikipedia.org/wiki/South_Africa"
+                },
+                "memberships": {
+                    "african_union": true,
+                    "arab_league": false,
+                    "asean": false,
+                    "brics": true,
+                    "commonwealth": true,
+                    "eu": false,
+                    "eurozone": false,
+                    "g20": true,
+                    "g7": false,
+                    "nato": false,
+                    "oecd": false,
+                    "opec": false,
+                    "schengen": false,
+                    "un": true
+                },
+                "number_format": {
+                    "decimal_separator": ".",
+                    "thousands_separator": ","
+                },
+                "parent": {
+                    "alpha_2": "",
+                    "alpha_3": ""
+                },
+                "population": 63015904,
+                "postal_code": {
+                    "format": "####",
+                    "regex": "^(\\d{4})$"
+                },
+                "timezones": [
+                    "UTC+02:00"
+                ],
+                "tlds": [
+                    ".za"
+                ],
+                "uuid": "9ad4932d-0bb6-44f1-8d0f-4bcb60a51103",
+                "_match": [
+                    {
+                        "path": "codes.alpha_2",
+                        "value": "ZA"
+                    }
+                ],
+                "_meta": {
+                    "lastUpdatedTimestamp": 1781804761
+                }
+            }
+        ],
+        "meta": {
+            "total": 1,
+            "count": 1,
+            "limit": 25,
+            "offset": 0,
+            "more": false,
+            "request_id": "9ebc5561-cf0a-450d-9849-868c510e22cf",
+            "duration": 29
+        }
+    }
+}

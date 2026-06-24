@@ -36,3 +36,26 @@ hmm, so I added currently 3 map layers, which seems fine as of now
 ### The Coordinate thing and API calling
 
 So hell yeah! I managed to get th e latitude and longitude and store it in the local variables inside the function, and now the main part is fetching the json file containing the details  
+
+So from nominatim, we receive address with country code which is in alpha 2 code. ANd this is exactly what we will use to get name and currency and all of the country
+
+now as we have the country code, we will going towards getting country details from **REST countries api**
+
+### Country info fetching
+
+```javascript 
+/countries/v5/codes.alpha_2/${countryCode}?pretty=1
+```
+^^ THis is what we are gonna use. The country code we are receiving from *Nominatim*, we pass through this!  
+
+The result we get is something like:  
+[Example of response we receive from REST](/example/country-info.json)
+
+So few things which is of our use:  
+1. **The Country Name:** *data.objects[0].names.common*
+2. **Capital:** *data.objects[0].capitals[x]*
+3. **Flag URL:** *data.objects[0].flag.url_png*
+4. **Area:** *data.objects[0].area.kilometers*
+5. **Currencies:** *data.objects[0].currencies[0].name*
+6. **Time Zones:** data.ojects[0].timezones[x]
+   
