@@ -59,3 +59,4 @@ So few things which is of our use:
 5. **Currencies:** *data.objects[0].currencies[0].name*
 6. **Time Zones:** data.ojects[0].timezones[x]
    
+holy shit man I hate css. it's just..
