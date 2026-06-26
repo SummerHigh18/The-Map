@@ -51,16 +51,39 @@ async function gettingAddress(e) {
 
 
     let theResponse = await fetch(`https://api.restcountries.com/countries/v5/codes.alpha_2/${countryCode}?pretty=1`, { headers: { 'Authorization': 'Bearer rc_live_ff75f42828d6448fba2304c585904f05' } }
-    )
+    ) 
+    // Yeah it is open, and go ahead using it :)
     let jsonResponse = await theResponse.json()
 
     let countryName = jsonResponse.data.objects[0].names.common
     let flagUrl = jsonResponse.data.objects[0].flag.url_png
     let currency = jsonResponse.data.objects[0].currencies[0].name
+    let currencySym = jsonResponse.data.objects[0].currencies[0].symbol
     let area  = jsonResponse.data.objects[0].area.kilometers
     let timezoneArray = jsonResponse.data.objects[0].timezones
 
     capitalArray = jsonResponse.data.objects[0].capitals.map(capital => capital.name) // umm this one was quite hard to grasp coz i didn't knew map() i just found out map is a better way than looping through for    
+
+    // Down here is the country info logging into html to show on the page
+
+    document.querySelector('#name').lastElementChild.innerText = countryName
+    
+    document.querySelector('#flag').firstElementChild.src = flagUrl
+    
+    currency = `${currency} (${currencySym})`
+    document.querySelector('.currency').children[1].innerText = currency
+    
+
+    let capitalList = document.querySelector('.capital').firstElementChild
+
+    capitalList.replaceChildren()
+
+    function addingList(capitalName) {
+        const li = document.createElement('li')
+        li.innerText = `${capitalName}`
+        document.querySelector('.capital').firstElementChild.appendChild(li)
+    }
+    capitalArray.forEach(addingList)
     
 }
 theMap.on('click', gettingAddress)

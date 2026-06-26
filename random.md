@@ -60,3 +60,19 @@ So few things which is of our use:
 6. **Time Zones:** data.ojects[0].timezones[x]
    
 holy shit man I hate css. it's just..
+
+**Okay, Everything's done after a lot of time and fixing things**  
+
+Let's have a recap or tldr of things done  
+**What's done till yet:**  
+1. **Leaflet map** rendering on the page with help of **OSM**
+2. Added different *Layers* to the page like dark, etc.
+3. Next up learned about the leaflet stuff like methods and click functions and all!
+4. With this, I then extracted the **coordinates** of any place user *clicks*
+5. Then I used **Nominatim** to get the address of that particular location user clicks; but my main usecase is extracting the *2 digit alpha code* of the country the user clicks
+6. So with this *code*, I can use the REST countries API to get country info!! (I listed above what im gonna display from this info)
+7. Now to display this stuff, HTML & CSS was to be at work. I designed a what you can say is a card type post-stamp (idk what else to call it) and oh man, CSS is really a mess if you don't know stuff, like really. 
+8. Jokes apart I managed to make a simple placeholder of this stamp which displays info, and now I just need to plug in the details I received from REST.
+   
+###
+
