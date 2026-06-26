@@ -58,6 +58,7 @@ So few things which is of our use:
 4. **Area:** *data.objects[0].area.kilometers*
 5. **Currencies:** *data.objects[0].currencies[0].name*
 6. **Time Zones:** data.ojects[0].timezones[x]
+7. **Population:** data.objects[0].population
    
 holy shit man I hate css. it's just..
 
@@ -74,5 +75,14 @@ Let's have a recap or tldr of things done
 7. Now to display this stuff, HTML & CSS was to be at work. I designed a what you can say is a card type post-stamp (idk what else to call it) and oh man, CSS is really a mess if you don't know stuff, like really. 
 8. Jokes apart I managed to make a simple placeholder of this stamp which displays info, and now I just need to plug in the details I received from REST.
    
-###
+### Displaying the info
+
+Now as we have the name, flag, currency, population, area and Capitals' & Timezones' array, we jut need to display it!
+
+**Name, flag & currency** is just straight up easy and done! I thought **capital** would also be easy but realised some countries have more than one *capital*, so I stored them into an *array*
+Then I made a func to loop through it and display is as a *list* on the page!
+
+Next I will be doing is making a module(coz why not) that converts big numbers like **1,000,000,000** to **1 Billion** which is more readable and better  
+yupp so made it, and now numbers are human readable!  
+
 

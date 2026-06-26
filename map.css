@@ -97,3 +97,22 @@
     margin-right: 60px;
 }
 
+#timezone-parent {
+    display: flex;
+    text-align: left;
+}
+.timezone {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 4px;
+}
+
+.timezone span {
+    background-color: #04342c;
+    color: #a8ebd6;
+    border-radius: 20px;
+    padding: 3px 9px 0 9px;
+    text-align: center;
+    font-size: 16px;
+    
+}

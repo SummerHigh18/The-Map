@@ -1,3 +1,5 @@
+import { formatNum } from "./modules/format-num.js";
+
 
 let theMap = L.map('map').setView([1.3521, 103.8198], 11);
 
@@ -61,11 +63,13 @@ async function gettingAddress(e) {
     let currencySym = jsonResponse.data.objects[0].currencies[0].symbol
     let area  = jsonResponse.data.objects[0].area.kilometers
     let timezoneArray = jsonResponse.data.objects[0].timezones
-
+    let population = jsonResponse.data.objects[0].population
     capitalArray = jsonResponse.data.objects[0].capitals.map(capital => capital.name) // umm this one was quite hard to grasp coz i didn't knew map() i just found out map is a better way than looping through for    
 
     // Down here is the country info logging into html to show on the page
 
+
+    
     document.querySelector('#name').lastElementChild.innerText = countryName
     
     document.querySelector('#flag').firstElementChild.src = flagUrl
@@ -84,8 +88,19 @@ async function gettingAddress(e) {
         document.querySelector('.capital').firstElementChild.appendChild(li)
     }
     capitalArray.forEach(addingList)
+
+    area = formatNum(area)
+    population = formatNum(population)
+
+    document.querySelector('.area').innerText = `${area} km²`
+    document.querySelector('.pop').innerText = population
+    
+
+        
     
 }
+
+
 theMap.on('click', gettingAddress)
 
 
