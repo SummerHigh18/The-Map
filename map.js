@@ -1,6 +1,5 @@
 import { formatNum } from "./modules/format-num.js";
 
-
 let theMap = L.map('map').setView([1.3521, 103.8198], 11);
 
 
@@ -35,11 +34,9 @@ let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
 
 
-
-
-
 async function gettingAddress(e) {
     let capitalArray = [];
+    // PArt: 1 -> ts gets us data variable which is json of the address
     let theCoordinates = e.latlng
     let theLatitude = theCoordinates.lat
     let theLongitude = theCoordinates.lng
@@ -47,16 +44,18 @@ async function gettingAddress(e) {
     let theUrl = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${theLatitude}&lon=${theLongitude}&layer=address`
     let response = await fetch(theUrl)
     let data = await response.json()
+    // Part 1 end 
 
+    // Part 2 -> this gets us the country data & stores in jsonResponse
     let countryCode = data.address.country_code
-
-
 
     let theResponse = await fetch(`https://api.restcountries.com/countries/v5/codes.alpha_2/${countryCode}?pretty=1`, { headers: { 'Authorization': 'Bearer rc_live_ff75f42828d6448fba2304c585904f05' } }
     ) 
     // Yeah it is open, and go ahead using it :)
     let jsonResponse = await theResponse.json()
+    // Part 2 ends
 
+    // PArt 3
     let countryName = jsonResponse.data.objects[0].names.common
     let flagUrl = jsonResponse.data.objects[0].flag.url_png
     let currency = jsonResponse.data.objects[0].currencies[0].name
@@ -66,10 +65,9 @@ async function gettingAddress(e) {
     let population = jsonResponse.data.objects[0].population
     capitalArray = jsonResponse.data.objects[0].capitals.map(capital => capital.name) // umm this one was quite hard to grasp coz i didn't knew map() i just found out map is a better way than looping through for    
 
-    // Down here is the country info logging into html to show on the page
-
-
+    // Part 3 ends 
     
+    // Down here is the country info logging into html to show on the page
     document.querySelector('#name').lastElementChild.innerText = countryName
     
     document.querySelector('#flag').firstElementChild.src = flagUrl
@@ -99,11 +97,7 @@ async function gettingAddress(e) {
 
     document.querySelector('.area').innerText = `${area} km²`
     document.querySelector('.pop').innerText = population
-    
-    
-
-        
-    
+   
 }
 
 

@@ -85,4 +85,18 @@ Then I made a func to loop through it and display is as a *list* on the page!
 Next I will be doing is making a module(coz why not) that converts big numbers like **1,000,000,000** to **1 Billion** which is more readable and better  
 yupp so made it, and now numbers are human readable!  
 
+So recap of what's done: Name, Capitals, Area, Population, flag and currency!!  
+Now the Time Zones!  
+
+So the thing is the capitals and timezones are somewhat similar, like in the context of storing and displaying stuff; So I am combining them into same **Function: addingList()**
+
+## V1 Completed!
+Yessssssssssss! It's finally doneee.User clicks a country and voila!!!! 
+
+---
+### Things to do now
+
+1. Hmm, so some bugs like **clicking water** and **outside the scope** gets some error needs to be fixed.  
+2. And crazy **optimization** is needed a lot, like really. Istg I won't understand the code myself after few days coz of how messy it is. 
+3. **Pinning the location** stuff after this.
 
