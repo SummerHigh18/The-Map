@@ -101,13 +101,13 @@
     display: flex;
     text-align: left;
 }
-.timezone {
+.timezone ul {
     flex-wrap: wrap;
     display: flex;
     gap: 4px;
 }
 
-.timezone span {
+.timezone li {
     background-color: #04342c;
     color: #a8ebd6;
     border-radius: 20px;

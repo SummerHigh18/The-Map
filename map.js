@@ -8,14 +8,14 @@ let theMap = L.map('map').setView([1.3521, 103.8198], 11);
 let osmSimple = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(theMap)
+});
 
 let smoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
     minZoom: 0,
     maxZoom: 20,
     attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     ext: 'png'
-});
+}).addTo(theMap);
 
 let darkOutline = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_dark/{z}/{x}/{y}{r}.{ext}', {
     minZoom: 0,
@@ -79,21 +79,27 @@ async function gettingAddress(e) {
     
 
     let capitalList = document.querySelector('.capital').firstElementChild
+    let timezoneList = document.querySelector('.timezone').firstElementChild
+    
+    function addingList(listElement, items) {
+        listElement.replaceChildren()
+        
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            listElement.appendChild(li);   
+        })
 
-    capitalList.replaceChildren()
-
-    function addingList(capitalName) {
-        const li = document.createElement('li')
-        li.innerText = `${capitalName}`
-        document.querySelector('.capital').firstElementChild.appendChild(li)
     }
-    capitalArray.forEach(addingList)
+    addingList(capitalList, capitalArray)
+    addingList(timezoneList, timezoneArray)
 
     area = formatNum(area)
     population = formatNum(population)
 
     document.querySelector('.area').innerText = `${area} km²`
     document.querySelector('.pop').innerText = population
+    
     
 
         
