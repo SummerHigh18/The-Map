@@ -34,74 +34,71 @@ let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
 
 
-async function gettingAddress(e) {
-    let capitalArray = [];
-    // PArt: 1 -> ts gets us data variable which is json of the address
+
+async function getAddress(e) {
     let theCoordinates = e.latlng
-    let theLatitude = theCoordinates.lat
+    let theLatitude = theCoordinates.lat;
     let theLongitude = theCoordinates.lng
 
     let theUrl = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${theLatitude}&lon=${theLongitude}&layer=address`
     let response = await fetch(theUrl)
-    let data = await response.json()
-    // Part 1 end 
 
-    // Part 2 -> this gets us the country data & stores in jsonResponse
-    let countryCode = data.address.country_code
+    return await response.json()
+}
+
+async function getCountryData(theAddress) {
+    const countryCode = theAddress.address.country_code
 
     let theResponse = await fetch(`https://api.restcountries.com/countries/v5/codes.alpha_2/${countryCode}?pretty=1`, { headers: { 'Authorization': 'Bearer rc_live_ff75f42828d6448fba2304c585904f05' } }
     ) 
     // Yeah it is open, and go ahead using it :)
-    let jsonResponse = await theResponse.json()
-    // Part 2 ends
+    let data = await theResponse.json()
+    return data.data.objects[0]
+}
 
-    // PArt 3
-    let countryName = jsonResponse.data.objects[0].names.common
-    let flagUrl = jsonResponse.data.objects[0].flag.url_png
-    let currency = jsonResponse.data.objects[0].currencies[0].name
-    let currencySym = jsonResponse.data.objects[0].currencies[0].symbol
-    let area  = jsonResponse.data.objects[0].area.kilometers
-    let timezoneArray = jsonResponse.data.objects[0].timezones
-    let population = jsonResponse.data.objects[0].population
-    capitalArray = jsonResponse.data.objects[0].capitals.map(capital => capital.name) // umm this one was quite hard to grasp coz i didn't knew map() i just found out map is a better way than looping through for    
+const countryName = document.querySelector('#name').lastElementChild
+const flagUrl = document.querySelector('#flag').firstElementChild
+const currency = document.querySelector('.currency').lastElementChild
+const area = document.querySelector('.area')
+const population = document.querySelector('.pop')
+const capitalList = document.querySelector('.capital').firstElementChild
+const timezoneList = document.querySelector('.timezone').firstElementChild
 
-    // Part 3 ends 
-    
-    // Down here is the country info logging into html to show on the page
-    document.querySelector('#name').lastElementChild.innerText = countryName
-    
-    document.querySelector('#flag').firstElementChild.src = flagUrl
-    
-    currency = `${currency} (${currencySym})`
-    document.querySelector('.currency').children[1].innerText = currency
-    
 
-    let capitalList = document.querySelector('.capital').firstElementChild
-    let timezoneList = document.querySelector('.timezone').firstElementChild
-    
-    function addingList(listElement, items) {
+function updatingList(listElement, items) {
         listElement.replaceChildren()
-        
         items.forEach(item => {
             const li = document.createElement('li');
             li.textContent = item;
-            listElement.appendChild(li);   
+            listElement.appendChild(li);
         })
-
     }
-    addingList(capitalList, capitalArray)
-    addingList(timezoneList, timezoneArray)
 
-    area = formatNum(area)
-    population = formatNum(population)
+function updateCountryCard(theData) {
+    countryName.innerText = theData.names.common
+    flagUrl.src = theData.flag.url_png
+    currency.innerText = `${theData.currencies[0].name} (${theData.currencies[0].symbol})`
+    area.innerText = `${formatNum(theData.area.kilometers)} km²`
+    population.innerText = formatNum(theData.population)
 
-    document.querySelector('.area').innerText = `${area} km²`
-    document.querySelector('.pop').innerText = population
-   
+    let capitalArray = theData.capitals.map(capital => capital.name)
+    let timezoneArray = theData.timezones
+
+    
+    updatingList(capitalList, capitalArray)
+    updatingList(timezoneList, timezoneArray)
 }
 
+async function onClick(e) {
+    const address = await getAddress(e)
+    const countryData = await getCountryData(address)
 
-theMap.on('click', gettingAddress)
+    updateCountryCard(countryData)
+
+
+}
+
+theMap.on('click', onClick)
 
 
 
