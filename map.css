@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -22,10 +22,11 @@
 
 #stamp-wrap {
     display: flex;
-    width: 30%;
+    width: 50%;
     flex-wrap: wrap;
     background-color: #f0e6d3;  
     align-content: flex-start;
+    justify-content: center;
 }
 
 #stamp {
@@ -130,8 +131,8 @@
     opacity: 0.5;
 }
 
-/* this whole down css is just for Toggle Button T-T  */
-.toggle { display: flex; align-items: center; gap: 12px; }
+/* this whole down css is just for Toggle Button T-T  Also, ts is AI-generated */
+.toggle { display: flex; align-items: center; gap: 12px; width: 100%; }
 
 .switch { position: relative; width: 120px; height: 34px; }
 .switch input { opacity: 0; width: 0; height: 0; }
@@ -162,3 +163,51 @@
 .switch input:checked + .slider::before { left: 62px; }
 .slider span { position: relative; z-index: 1; font-family: 'Special Elite', monospace; }
 .slider .on { color: #04342C; }
+
+#notes {
+    font-family: 'Josefin Sans';
+    margin: 28px 48px;
+    border: 3px solid #242223;
+    width: 100%;
+}
+
+#note-title {
+    
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #c1604a;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+#note-title span {
+    font-size: 14px;
+    margin: 0;
+}
+
+#note-form {
+    padding: 24px;
+    background-color: #7AA7A5;
+    flex-direction: column;
+    display: flex;
+    gap: 14px;
+    
+}
+
+#note-form label {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.input-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input[type="text"], textarea {
+    padding: 12px;
+    background-color: #F2EFE9;
+    border: 2px solid #242223;
+}
