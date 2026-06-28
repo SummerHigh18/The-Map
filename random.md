@@ -100,3 +100,6 @@ Yessssssssssss! It's finally doneee.User clicks a country and voila!!!!
 2. And crazy **optimization** is needed a lot, like really. Istg I won't understand the code myself after few days coz of how messy it is. 
 3. **Pinning the location** stuff after this.
 
+## Pinning and saving things
+So almost everything's done. Made the code a lot more cleaner!  
+Now let's do the Pin stuff!

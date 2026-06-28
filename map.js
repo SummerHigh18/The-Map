@@ -98,7 +98,24 @@ async function onClick(e) {
 
 }
 
-theMap.on('click', onClick)
+let mode = "info"
+
+document.querySelector('#check').addEventListener('change', function(){
+    if (this.checked) {
+        document.querySelector('.indicate').innerText = "It's now in Pin mode..."
+        mode = 'pin'
+    } else {
+        document.querySelector('.indicate').innerText = "It's currently in Info mode..."
+        mode = "info"
+    }
+})
+
+
+theMap.on('click', function(e) {
+    if (mode === 'info') {
+        onClick(e)
+    }
+})
 
 
 
