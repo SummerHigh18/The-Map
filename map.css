@@ -262,3 +262,26 @@ body {
     font-family: 'Josefin Sans';
     font-size: 16px;
 }
+
+#note-form button {
+    background-color: #c1604a;
+    color: #242223;
+    padding: 15px;
+    font-family: 'Josefin Sans';
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: all 0.2s;
+    outline: none;
+    border: 2px solid #242223;
+    cursor: pointer;
+
+}
+
+/* and this one too is taken from an AI snippet */
+#note-form button:hover {
+    background-color: #F2EFE9;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #242223;
+}

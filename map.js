@@ -134,12 +134,13 @@ document.querySelector('#check').addEventListener('change', function(){
     }
 })
 
-
+let marker = L.marker([1.3521, 103.8198])
 theMap.on('click', function(e) {
     if (mode === 'info') {
         onClick(e)
     } else if (mode === 'pin') {
         pinClick(e)
+        marker.setLatLng(e.latlng).addTo(theMap)
     }
 })
 
