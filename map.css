@@ -170,6 +170,7 @@
     margin: 28px 48px;
     border: 3px solid #242223;
     width: 100%;
+    /* display: none; */
 }
 
 #note-title {
@@ -224,7 +225,7 @@ input[type="text"]:focus, textarea:focus {
     box-shadow: 4px 4px 0px #242223;
 }
 
-
+/* I took help of https://scrollbar.app/ for the scroll-bar */
 body {
   --sb-track-color: #232E33;
   --sb-thumb-color: #7aa7a5;
@@ -254,3 +255,4 @@ body {
                      var(--sb-track-color);
   }
 }
+

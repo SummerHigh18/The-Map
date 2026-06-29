@@ -104,9 +104,11 @@ document.querySelector('#check').addEventListener('change', function(){
     if (this.checked) {
         document.querySelector('.indicate').innerText = "It's now in Pin mode..."
         mode = 'pin'
+        document.getElementById('notes').style.display = 'block';
     } else {
         document.querySelector('.indicate').innerText = "It's currently in Info mode..."
         mode = "info"
+        document.getElementById('notes').style.display = 'none';
     }
 })
 
