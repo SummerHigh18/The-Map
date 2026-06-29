@@ -22,17 +22,18 @@
 
 #stamp-wrap {
     display: flex;
-    width: 50%;
+    width: 35%;
     flex-wrap: wrap;
     background-color: #f0e6d3;  
     align-content: flex-start;
     justify-content: center;
+    height: 100vh;
+    overflow: auto;
 }
 
 #stamp {
     width: 100%;
     /* height: 50%; */
-    border: 2px solid #2a2a2a;
     padding: 16px;
     position: relative;
     font-family: 'Special Elite';
@@ -210,4 +211,46 @@ input[type="text"], textarea {
     padding: 12px;
     background-color: #F2EFE9;
     border: 2px solid #242223;
+    transition: transform 0.2s;;
+    outline: none;
+}
+textarea {
+    min-height: 100px;
+}
+
+/* For THis transition I took help from AI */
+input[type="text"]:focus, textarea:focus {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #242223;
+}
+
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #7aa7a5;
+  --sb-size: 3px;
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: 3px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }
