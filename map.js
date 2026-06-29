@@ -100,6 +100,28 @@ async function onClick(e) {
 
 let mode = "info"
 
+async function pinClick(e) {
+    const countryAddress = await getAddress(e)
+
+    let theCountry = countryAddress.address.country
+    let theState = countryAddress.address.state
+    let theCity = countryAddress.address.city
+    let thePlaceholder;
+
+    if (theCity !== undefined) {
+        thePlaceholder = `${theCity}, ${theCountry}`
+    } else if (theState !== undefined) {
+        thePlaceholder = `${theState}, ${theCountry}`
+    } else if (theCountry === undefined) {
+        thePlaceholder = `${theCountry}`
+    } else {
+        thePlaceholder = 'Switzerland'
+    }
+
+    document.getElementById('form-location').placeholder = thePlaceholder
+
+}
+
 document.querySelector('#check').addEventListener('change', function(){
     if (this.checked) {
         document.querySelector('.indicate').innerText = "It's now in Pin mode..."
@@ -108,7 +130,7 @@ document.querySelector('#check').addEventListener('change', function(){
     } else {
         document.querySelector('.indicate').innerText = "It's currently in Info mode..."
         mode = "info"
-        document.getElementById('notes').style.display = 'none';
+        document.getElementById('notes').style.display = 'none  ';
     }
 })
 
@@ -116,6 +138,8 @@ document.querySelector('#check').addEventListener('change', function(){
 theMap.on('click', function(e) {
     if (mode === 'info') {
         onClick(e)
+    } else if (mode === 'pin') {
+        pinClick(e)
     }
 })
 
