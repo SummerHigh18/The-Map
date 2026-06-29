@@ -159,7 +159,11 @@ button.addEventListener('click', () => {
         title, location, notes, markerLocation
     })
     console.log(savedNotes[0]);
-    
+
+    savedNotes.forEach(item => {
+        let theMarker = L.marker(item.markerLocation).addTo(theMap)
+        theMarker.bindPopup(`<p id="marker-title">${item.title}</p> <p>At: ${item.location}`)
+    }) 
 })
 
 

@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 
 #map {
@@ -12,7 +13,19 @@
     /* height: 100vh; */
     height: 100vh;
     border: 0;
+    font-family: 'Josefin Sans';
+    /* font-weight: 100; */
     
+}
+
+#marker-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#map p {
+    font-size: 18px;
 }
 
 #main {
