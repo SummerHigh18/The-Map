@@ -134,16 +134,33 @@ document.querySelector('#check').addEventListener('change', function(){
     }
 })
 
+
 let marker = L.marker([1.3521, 103.8198])
+let markerLocation;
 theMap.on('click', function(e) {
     if (mode === 'info') {
         onClick(e)
     } else if (mode === 'pin') {
         pinClick(e)
         marker.setLatLng(e.latlng).addTo(theMap)
+        markerLocation = e.latlng
     }
 })
 
+let savedNotes = []  // everyt note would be stored here temporarily
+let button = document.getElementById('save-btn')
+
+button.addEventListener('click', () => {
+    let title = document.getElementById('form-title').value
+    let location = document.getElementById('form-location').value
+    let notes = document.getElementById('form-notes').value
+
+    savedNotes.push({
+        title, location, notes, markerLocation
+    })
+    console.log(savedNotes[0]);
+    
+})
 
 
 
