@@ -32,7 +32,19 @@ let mapLayers = {
 }
 let layerControl = L.control.layers(mapLayers).addTo(theMap);
 
-
+const PinIcon = L.divIcon({
+            className: 'custom-icon',
+            html: `
+                <div class="map-marker">
+                    <div class="pin-base">
+                        <div class="pin-graphic"></div>
+                    </div>
+                </div>
+            `,
+            iconSize: [60, 60], 
+            iconAnchor: [30, 60],
+            popupAnchor: [0, -60] 
+        });
 
 
 async function getAddress(e) {
@@ -135,7 +147,7 @@ document.querySelector('#check').addEventListener('change', function(){
 })
 
 
-let marker = L.marker([1.3521, 103.8198])
+let marker = L.marker([1.3521, 103.8198], {icon: PinIcon})
 let markerLocation;
 theMap.on('click', function(e) {
     if (mode === 'info') {
@@ -161,12 +173,16 @@ button.addEventListener('click', () => {
     console.log(savedNotes[0]);
 
     savedNotes.forEach(item => {
-        let theMarker = L.marker(item.markerLocation).addTo(theMap)
-        theMarker.bindPopup(`<p id="marker-title">${item.title}</p> <p>At: ${item.location}`)
+        let theMarker = L.marker(item.markerLocation, {icon: PinIcon}).addTo(theMap)
+        theMarker.bindPopup(`<p id="marker-title">${item.title}</p> <p id="popup-location">At: ${item.location}</p>`)
     }) 
 })
 
+let toggleBtn = document.getElementById('pin-toggle')
 
+toggleBtn.addEventListener('click', () => {
+    toggleBtn.classList.toggle('shadow')
+})
 
 
 

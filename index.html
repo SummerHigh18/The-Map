@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ts is the css OF leaflet -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <!-- and this is the js for Leaflet -->
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <link rel="stylesheet" href="map.css">
     <title>The_Map</title>
 </head>
+
 <body>
     <div id="main">
         <div id="stamp-wrap">
@@ -62,11 +62,11 @@
                             </span>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="toggle">
-                
+
                 <label class="switch">
                     <input id="check" type="checkbox" />
                     <div class="slider">
@@ -74,9 +74,12 @@
                         <span class="on">PIN</span>
                     </div>
                 </label>
+                
+                
                 <span class="indicate">It's currently in Info mode...</span>
             </div>
-            
+
+
             <div id="notes">
                 <div id="note-title">
                     <div> JOT IT DOWN!</div>
@@ -98,14 +101,23 @@
                     <button id="save-btn">SAVE NOTE!</button>
                 </div>
             </div>
-            
+            <div id="pins-dropdown">
+                <button id="pin-toggle">
+                    <span>Select the saved pin!</span>
+                </button>
+                <ul id="pin-list">
+                    <!-- <li class="pin-items"">Vacation!</li> -->
+                </ul>
+            </div>
+
 
         </div>
 
         <div id="map"></div>
     </div>
-    
-    <script type="module" src="map.js" ></script>
-    <script src="utils.js" ></script>
+
+    <script type="module" src="map.js"></script>
+    <script src="utils.js"></script>
 </body>
+
 </html>

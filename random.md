@@ -103,3 +103,18 @@ Yessssssssssss! It's finally doneee.User clicks a country and voila!!!!
 ## Pinning and saving things
 So almost everything's done. Made the code a lot more cleaner!  
 Now let's do the Pin stuff!
+
+I didn't journal for quite long, so let me write in brief what i did:  
+
+So after the v1 was complete, i made the js code readable by dividing each function.  
+Then I went for doing my next part of this project which is a notes section where you can write down your thoughts and notes a particular location like for eg: Holidays in Italy and write the to-do things you wanna experience, etc.  
+![alt text](image.png)  
+So I designed the rough layout on pen-paper, then CSS, but I stumbled into a dead-end, so Gemini helped me a lot, the **flex stuff**, and the **animations** **and shadows** and all.  
+And the honourable mention: *Claude* made the **toggle switch**! yup, I couldn't think of much, so he made it, and I did sm chages and **voila!**
+
+WIth this, now the user can save their notes, and it will appear on the map!
+It's currently stored temporarily like in the browser, and are gone once the user refreshes.  
+
+Now the Saved Notes part:  
+I will be making a drop down so the user sees what they have saved!  
+But there's an **issue**. I thought of using the select tag of html, but while using it, I got to know that you can't really style it properly. So I'll be making it custom, like with javascript and buttons!

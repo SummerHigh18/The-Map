@@ -5,8 +5,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    
+
 }
+
 
 #map {
     width: 70%;
@@ -15,13 +16,22 @@
     border: 0;
     font-family: 'Josefin Sans';
     /* font-weight: 100; */
-    
+
 }
 
 #marker-title {
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+    color: #f0e6d3;
+    margin: 0 0 6px;
+}
+#popup-location {
+    font-weight: 700;
+    font-size: 14px;
+    color: #c1604a;
+    margin: 0;
+
 }
 
 #map p {
@@ -37,7 +47,7 @@
     display: flex;
     width: 35%;
     flex-wrap: wrap;
-    background-color: #f0e6d3;  
+    background-color: #f0e6d3;
     align-content: flex-start;
     justify-content: center;
     height: 100vh;
@@ -61,10 +71,10 @@
 }
 
 #stamp-inner {
-  border: 4px solid #2a2a2a;
-  padding: 12px;
-  background: #c1604a;
-  position: relative;
+    border: 4px solid #2a2a2a;
+    padding: 12px;
+    background: #c1604a;
+    position: relative;
 }
 
 #name {
@@ -120,6 +130,7 @@
     display: flex;
     text-align: left;
 }
+
 .timezone ul {
     flex-wrap: wrap;
     display: flex;
@@ -133,50 +144,86 @@
     padding: 3px 9px 0 9px;
     text-align: center;
     font-size: 16px;
-    
+
 }
 
 .toggle {
     margin: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .indicate {
     font-style: italic;
     opacity: 0.5;
+    
 }
 
 /* this whole down css is just for Toggle Button T-T  Also, ts is AI-generated */
-.toggle { display: flex; align-items: center; gap: 12px; width: 100%; }
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
 
-.switch { position: relative; width: 120px; height: 34px; }
-.switch input { opacity: 0; width: 0; height: 0; }
+.switch {
+    position: relative;
+    width: 120px;
+    height: 34px;
+    
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
 .slider {
-  position: absolute; inset: 0;
-  background: #c1604a;
-  border: 2px solid #2a2a2a;
-  cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: #f0e6d3;
+    position: absolute;
+    inset: 0;
+    background: #c1604a;
+    border: 2px solid #2a2a2a;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #f0e6d3;
 }
+
 .slider::before {
-  content: '';
-  position: absolute;
-  width: 50px; height: 24px;
-  background: #f0e6d3;
-  border: 1px solid #2a2a2a;
-  left: 4px;
-  transition: 0.3s;
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 24px;
+    background: #f0e6d3;
+    border: 1px solid #2a2a2a;
+    left: 4px;
+    transition: 0.3s;
 }
-.switch input:checked + .slider { background: #5DCAA5; }
-.switch input:checked + .slider::before { left: 62px; }
-.slider span { position: relative; z-index: 1; font-family: 'Special Elite', monospace; }
-.slider .on { color: #04342C; }
+
+.switch input:checked+.slider {
+    background: #5DCAA5;
+}
+
+.switch input:checked+.slider::before {
+    left: 62px;
+}
+
+.slider span {
+    position: relative;
+    z-index: 1;
+    font-family: 'Special Elite', monospace;
+}
+
+.slider .on {
+    color: #04342C;
+}
 
 #notes {
     font-family: 'Josefin Sans';
@@ -187,7 +234,7 @@
 }
 
 #note-title {
-    
+
     font-weight: bold;
     font-size: 20px;
     background-color: #c1604a;
@@ -207,8 +254,8 @@
     flex-direction: column;
     display: flex;
     gap: 14px;
-    
-    
+
+
 }
 
 #note-form label {
@@ -220,58 +267,62 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    
+
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
     padding: 12px;
     background-color: #F2EFE9;
     border: 2px solid #242223;
-    transition: transform 0.2s;;
+    transition: transform 0.2s;
+    ;
     outline: none;
 }
+
 textarea {
     min-height: 100px;
 }
 
 /* For THis transition I took help from AI */
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus,
+textarea:focus {
     transform: translate(-2px, -2px);
     box-shadow: 4px 4px 0px #242223;
 }
 
 /* I took help of https://scrollbar.app/ for the scroll-bar */
 body {
-  --sb-track-color: #232E33;
-  --sb-thumb-color: #7aa7a5;
-  --sb-size: 3px;
+    --sb-track-color: #232E33;
+    --sb-thumb-color: #7aa7a5;
+    --sb-size: 3px;
 }
 
 ::-webkit-scrollbar {
-  width: var(--sb-size);
-  height: 3px;
-  
+    width: var(--sb-size);
+    height: 3px;
+
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 5px;
+    background: var(--sb-track-color);
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 5px;
-  
+    background: var(--sb-thumb-color);
+    border-radius: 5px;
+
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
-  }
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
 }
 
-.input-grp input, textarea {
+.input-grp input,
+textarea {
     font-family: 'Josefin Sans';
     font-size: 16px;
 }
@@ -296,5 +347,123 @@ body {
 #note-form button:hover {
     background-color: #F2EFE9;
     transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #242223;
+}
+
+
+
+/* this marker is made by AI :) */
+.map-marker {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.4));
+
+    --pin-scale: 0.6;
+    transform: scale(var(--pin-scale));
+    transform-origin: bottom center;
+}
+
+
+.map-marker:active {
+    transform: scale(var(--pin-scale)) translate(4px, 4px);
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.6));
+}
+
+.pin-base {
+    width: 60px;
+    height: 60px;
+    background-color: #a5e9ee;
+    border: 3px solid #242223;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -4px -4px 0px #7AA7A5;
+
+}
+
+.pin-graphic {
+    width: 34px;
+    height: 34px;
+    background-color: #DE7A66;
+    border: 3px solid #242223;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    overflow: hidden;
+    background-image: repeating-radial-gradient(circle at 50% -35%, transparent, transparent 5px, #242223 6px, #242223 8px);
+}
+
+
+
+.map-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 4px;
+    background-color: #242223;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.custom-icon {
+    background: none;
+    border: none;
+}
+
+/* the class of the popup tip is: leaflet-popup-tip-container (for the margin only) */
+/* the class of the whole popup with the border radius property is: .leaflet-popup-content-wrapper (for border radius and bg color) */
+
+/* .leaflet-popup-content::before */
+
+.leaflet-popup-content-wrapper {
+    /* width: 160px; */
+    border-radius: 0;
+    background-color: #2a2a2a;
+    border: 2px solid #f0e6d3;
+    padding: 10px 12px;
+    position: relative;
+}
+
+.leaflet-popup-content::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 2px dashed #c1604a;
+}
+
+.leaflet-popup-tip-container {
+    margin-top: 8px;
+}
+
+#pins-dropdown {
+    position: relative;
+    font-family: 'Josefin Sans';
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#pin-toggle {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #c1604a;
+    outline: none;
+    border: 3px solid #242223;
+    cursor: pointer;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.1s;
+}
+
+#pin-toggle.shadow {
+    transform: translate(2px, 2px);
     box-shadow: 4px 4px 0px #242223;
 }
