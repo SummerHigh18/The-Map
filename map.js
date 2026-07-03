@@ -139,10 +139,12 @@ document.querySelector('#check').addEventListener('change', function(){
         document.querySelector('.indicate').innerText = "It's now in Pin mode..."
         mode = 'pin'
         document.getElementById('notes').style.display = 'block';
+        document.getElementById('pins-dropdown').style.display = 'block';
     } else {
         document.querySelector('.indicate').innerText = "It's currently in Info mode..."
         mode = "info"
-        document.getElementById('notes').style.display = 'none  ';
+        document.getElementById('notes').style.display = 'none';
+        document.getElementById('pins-dropdown').style.display = 'none';
     }
 })
 
@@ -179,9 +181,11 @@ button.addEventListener('click', () => {
 })
 
 let toggleBtn = document.getElementById('pin-toggle')
+let pinList = document.getElementById('pin-list')
 
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('shadow')
+    pinList.classList.toggle('open')
 })
 
 

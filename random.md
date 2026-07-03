@@ -117,4 +117,7 @@ It's currently stored temporarily like in the browser, and are gone once the use
 
 Now the Saved Notes part:  
 I will be making a drop down so the user sees what they have saved!  
+
 But there's an **issue**. I thought of using the select tag of html, but while using it, I got to know that you can't really style it properly. So I'll be making it custom, like with javascript and buttons!
+
+Okayyy so I did the dropdown thing
