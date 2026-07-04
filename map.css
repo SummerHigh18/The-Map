@@ -21,14 +21,14 @@
 
 #marker-title {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: #f0e6d3;
     margin: 0 0 6px;
 }
 #popup-location {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: #c1604a;
     margin: 0;
 
@@ -453,7 +453,7 @@ textarea {
 #pin-toggle {
     width: 100%;
     padding: 12px 16px;
-    background-color: #c1604a;
+    background-color: #F2EFE9;
     outline: none;
     border: 3px solid #242223;
     cursor: pointer;
@@ -462,11 +462,14 @@ textarea {
     font-size: 18px;
     transition: transform 0.25s;
     letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0px #242223;
 }
 
 #pin-toggle.shadow {
     transform: translate(2px, 2px);
-    box-shadow: 4px 4px 0px #242223;
+    background-color: #c1604a;
 }
 
 

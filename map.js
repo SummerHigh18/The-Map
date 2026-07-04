@@ -127,7 +127,7 @@ async function pinClick(e) {
     } else if (theCountry === undefined) {
         thePlaceholder = `${theCountry}`
     } else {
-        thePlaceholder = 'Switzerland'
+        thePlaceholder = 'Switzerland';
     }
 
     document.getElementById('form-location').placeholder = thePlaceholder
@@ -164,11 +164,14 @@ theMap.on('click', function(e) {
 let savedNotes = []  // everyt note would be stored here temporarily
 let button = document.getElementById('save-btn')
 
+let pinList = document.getElementById('pin-list');
+
+
 button.addEventListener('click', () => {
     let title = document.getElementById('form-title').value
     let location = document.getElementById('form-location').value
     let notes = document.getElementById('form-notes').value
-
+    let btnText = document.getElementById('btn-text')
     savedNotes.push({
         title, location, notes, markerLocation
     })
@@ -177,11 +180,30 @@ button.addEventListener('click', () => {
     savedNotes.forEach(item => {
         let theMarker = L.marker(item.markerLocation, {icon: PinIcon}).addTo(theMap)
         theMarker.bindPopup(`<p id="marker-title">${item.title}</p> <p id="popup-location">At: ${item.location}</p>`)
+
+
+    
     }) 
+
+    // pinList.replaceChildren()
+    const li = document.createElement('li')
+    li.classList.add('pin-items')
+    li.textContent = title
+    pinList.appendChild(li)
+    
+    let listItems = document.querySelectorAll('.pin-items')
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            btnText.textContent = item.textContent   
+            pinList.classList.toggle('open')
+            toggleBtn.classList.toggle('shadow')
+        })
+    })
+
 })
 
 let toggleBtn = document.getElementById('pin-toggle')
-let pinList = document.getElementById('pin-list')
+
 
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('shadow')
