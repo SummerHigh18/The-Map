@@ -242,7 +242,6 @@ button.addEventListener('click', () => {
 let toggleBtn = document.getElementById('pin-toggle')
 
 
-let mo
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('shadow')
     pinList.classList.toggle('open')

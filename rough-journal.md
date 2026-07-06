@@ -108,7 +108,7 @@ I didn't journal for quite long, so let me write in brief what i did:
 
 So after the v1 was complete, i made the js code readable by dividing each function.  
 Then I went for doing my next part of this project which is a notes section where you can write down your thoughts and notes a particular location like for eg: Holidays in Italy and write the to-do things you wanna experience, etc.  
-![alt text](image.png)  
+![alt text](./images/image.png)  
 So I designed the rough layout on pen-paper, then CSS, but I stumbled into a dead-end, so Gemini helped me a lot, the **flex stuff**, and the **animations** **and shadows** and all.  
 And the honourable mention: *Claude* made the **toggle switch**! yup, I couldn't think of much, so he made it, and I did sm chages and **voila!**
 
@@ -120,4 +120,16 @@ I will be making a drop down so the user sees what they have saved!
 
 But there's an **issue**. I thought of using the select tag of html, but while using it, I got to know that you can't really style it properly. So I'll be making it custom, like with javascript and buttons!
 
-Okayyy so I did the dropdown thing
+Okayyy so I did the dropdown thing too!
+
+## Update
+So everything is done! I didn't journal stuff, idk why, but whoever reading this, if you see the commit changes and it's description, you will understand!
+
+## Future versions and updates:
+There are few bugs and features which I will add improve in future for maybe more control and better experience!
+
+## AI Usage
+Okay so istg the major part of AI usage is for CSS; which are the animation and transition and a toggle button on the screen. I even have explicitly marked what and how much AI is used.
+Except this, I took help from it for layout stuff like Flexbox and lists, etc in CSS.  
+For Javascript, I used AI just for debugging, and asking about the fetch and async stuff. This is my first JS project, so I didn't knew stuff like asynchronous and other concepts, where I was like totally blank, so some videos and AI helped me:)   
+Seeing the code(and the commits too), you will understand yourself where AI was used and where it wasn't.(since my code is too messed up, like really T-T) 
