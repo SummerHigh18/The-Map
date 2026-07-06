@@ -443,7 +443,7 @@ textarea {
     position: relative; 
     font-family: 'Josefin Sans';
     width: 230px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;    
     /* display: none; */

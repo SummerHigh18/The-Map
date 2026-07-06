@@ -137,11 +137,13 @@ async function pinClick(e) {
 document.querySelector('#check').addEventListener('change', function(){
     if (this.checked) {
         document.querySelector('.indicate').innerText = "It's now in Pin mode..."
+        document.querySelector('#indication').innerText = "Click on any place to Pin it on the map!"
         mode = 'pin'
         document.getElementById('notes').style.display = 'block';
         document.getElementById('pins-dropdown').style.display = 'block';
     } else {
         document.querySelector('.indicate').innerText = "It's currently in Info mode..."
+        document.querySelector('#indication').innerText = "Click on any country to get it's info!"
         mode = "info"
         document.getElementById('notes').style.display = 'none';
         document.getElementById('pins-dropdown').style.display = 'none';
