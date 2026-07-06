@@ -161,13 +161,31 @@ theMap.on('click', function(e) {
     }
 })
 
-let savedNotes = []  // every note would be stored here temporarily
-let button = document.getElementById('save-btn')
-
+let savedNotes = JSON.parse(localStorage.getItem('savedNotes')) || [] // So whenever the user 
 let pinList = document.getElementById('pin-list');
 
+if (savedNotes.length != 0) {
 
-let i = 0;
+    savedNotes.forEach(item => {
+        let savedItem = document.createElement('li');
+        savedItem.classList.add('pin-items')
+        savedItem.textContent = item.title
+        savedItem.dataset.index = item.i
+        pinList.appendChild(savedItem)
+
+        let theMarker = L.marker(item.markerLocation, {
+            icon: PinIcon
+        }).addTo(theMap)
+        theMarker.bindPopup((`<p id="marker-title">${item.title}</p> <p id="popup-location">At: ${item.location}</p>`))
+    })
+}
+
+
+let button = document.getElementById('save-btn');
+
+let i = savedNotes.length;
+
+
 button.addEventListener('click', () => {
     let title = document.getElementById('form-title').value
     let location = document.getElementById('form-location').value
@@ -176,6 +194,8 @@ button.addEventListener('click', () => {
     savedNotes.push({
         i, title, location, notes, markerLocation, marker: null
     })
+
+    localStorage.setItem('savedNotes', JSON.stringify(savedNotes))
 
     const latest = savedNotes.at(-1);
     latest.marker = L.marker(latest.markerLocation, {
