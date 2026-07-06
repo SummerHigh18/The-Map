@@ -161,34 +161,40 @@ theMap.on('click', function(e) {
     }
 })
 
-let savedNotes = []  // everyt note would be stored here temporarily
+let savedNotes = []  // every note would be stored here temporarily
 let button = document.getElementById('save-btn')
 
 let pinList = document.getElementById('pin-list');
 
 
+let i = 0;
 button.addEventListener('click', () => {
     let title = document.getElementById('form-title').value
     let location = document.getElementById('form-location').value
     let notes = document.getElementById('form-notes').value
     let btnText = document.getElementById('btn-text')
     savedNotes.push({
-        title, location, notes, markerLocation
+        i, title, location, notes, markerLocation, marker: null
     })
-    console.log(savedNotes[0]);
 
-    savedNotes.forEach(item => {
-        let theMarker = L.marker(item.markerLocation, {icon: PinIcon}).addTo(theMap)
-        theMarker.bindPopup(`<p id="marker-title">${item.title}</p> <p id="popup-location">At: ${item.location}</p>`)
+    const latest = savedNotes.at(-1);
+    latest.marker = L.marker(latest.markerLocation, {
+        icon: PinIcon
+    }).addTo(theMap);
 
+    latest.marker.bindPopup(`<p id="marker-title">${latest.title}</p> <p id="popup-location">At: ${latest.location}</p>`)
 
     
-    }) 
+
+
 
     // pinList.replaceChildren()
     const li = document.createElement('li')
     li.classList.add('pin-items')
-    li.textContent = title
+    li.textContent = savedNotes.at(-1).title
+    li.dataset.index = i 
+    // ^ this thing took me 2hrs T-T 
+    // I wasn't able to figure out how do I access each of the list item uniquely
     pinList.appendChild(li)
     
     let listItems = document.querySelectorAll('.pin-items')
@@ -197,14 +203,24 @@ button.addEventListener('click', () => {
             btnText.textContent = item.textContent   
             pinList.classList.toggle('open')
             toggleBtn.classList.toggle('shadow')
-        })
-    })
+            let theLocation = savedNotes[item.dataset.index].markerLocation
+            theMap.flyTo(theLocation, 11)
+            savedNotes[item.dataset.index].marker.openPopup()
 
+        })
+        
+    })
+    i = i + 1;
+    console.log(savedNotes);
+    
 })
+
+
 
 let toggleBtn = document.getElementById('pin-toggle')
 
 
+let mo
 toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.toggle('shadow')
     pinList.classList.toggle('open')
