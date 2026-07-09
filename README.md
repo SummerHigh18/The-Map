@@ -7,6 +7,13 @@
 
 I have used **Leaflet and OpenStreetMaps** for the Map, **REST Countries API** for Country Info and **Nominatim** for fetching country from **coordinates.**
 
+## To Use
+
+So there are 2 major use-cases  
+- First one is you want the **country card**, so that you can get the country's info. **To do that**, you have to toggle to the Info mode(pre-default), and then, **click** on any country. In about ~2 seconds, the info will be available in the left panel!
+  
+- Second is you want to **pin and mark** a certain location, for maybe **vacation plans, or trips, anything!**, you toglle to the Pin mode. Then, after clicking on any place on the map, a marker will pop-up, and at that time you enter the country details on the left in the notes section. And when you press enter, the note gets saved into the **Saved Pin dropdown!**
+
 **Current Status:** v2 is completed, and the website is fully functional.  
 
 ![alt text](./images/image-1.png)
