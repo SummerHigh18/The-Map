@@ -65,7 +65,7 @@ async function getCountryData(theAddress) {
     ) 
     // Yeah it is open, and go ahead using it :)
     let data = await theResponse.json()
-    return data.data.objects[0]
+    return await data.data.objects[0]
 }
 
 const countryName = document.querySelector('#name').lastElementChild
